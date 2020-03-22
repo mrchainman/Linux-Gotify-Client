@@ -8,7 +8,13 @@ def clear_notification(identifier):
 
 if __name__ == "__main__":
     while True:
-        r = requests.get(f"{url}/message", headers=headers)
+        try:
+            r = requests.get(f"{url}/message", headers=headers)
+            print("Connection established")
+        except:
+            print("Lost connection, retrying in 5 seconds...")
+            time.sleep(5)
+            continue
         m = (r.json())
         messages_list = m["messages"]
         for i in range(len(messages_list)):
