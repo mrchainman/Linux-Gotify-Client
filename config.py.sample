@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+url = "https://push.example.com"
+token = "TOKEN"
+delay = 60
+# Link to image shown in the dunst notifications
+image = "/usr/share/icons/custom/gotify.png"
