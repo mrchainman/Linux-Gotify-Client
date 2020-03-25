@@ -27,13 +27,17 @@ if __name__ == "__main__":
                     message,
                     image
                 )
+                notification.set_app_name("Gotify")
                 notification.add_action(
                 "action_click",
                 "Delete Notification",
                 clear_notification,
                 identifier # Arguments
                 )
-                notification.show()
-                old.append(message)
+                try:
+                    notification.show()
+                    old.append(message)
+                except:
+                    pass
         time.sleep(delay)
     Notify.uninit()
