@@ -38,6 +38,6 @@ if __name__ == "__main__":
                     notification.show()
                     old.append(message)
                 except:
-                    pass
+                    print("Could not connect to Dunst")
         time.sleep(delay)
     Notify.uninit()
